@@ -11,10 +11,10 @@
 
 ```
 
-## IMPORTANT MESSAGE
+## IMPORTANT MESSAGE FOR THE READER
 
 This notebook is long due to automatically generated plots.
-It is highly recommended to use the [markdown version](markdown/02_exploratory_data_analysis.md) instead of the GitHub preview, as the latter can show partial notebook.
+**It is highly recommended to use the [markdown version](markdown/02_exploratory_data_analysis.md)** instead of the GitHub preview, as the latter can show partial notebook.
 
 ## In this notebook
 
