@@ -1,10 +1,5 @@
 # Exploratory Data Analysis
 
-## IMPORTANT MESSAGE
-
-This notebook is long due to automatically generated plots.
-Hence it is highly recomended to use the [markdown version](markdown/02_exploratory_data_analysis.md) instead.
-
 
 ```python
 # DS18 ML Essentials project
@@ -15,6 +10,11 @@ Hence it is highly recomended to use the [markdown version](markdown/02_explorat
 # First submission: 17/03/2025
 
 ```
+
+## IMPORTANT MESSAGE
+
+This notebook is long due to automatically generated plots.
+It is highly recommended to use the [markdown version](markdown/02_exploratory_data_analysis.md) instead of the GitHub preview, as the latter can show partial notebook.
 
 ## In this notebook
 
