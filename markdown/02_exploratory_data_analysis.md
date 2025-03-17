@@ -14,7 +14,7 @@
 ## IMPORTANT MESSAGE FOR THE READER
 
 This notebook is long due to automatically generated plots.
-**It is highly recommended to use the [markdown version](markdown/02_exploratory_data_analysis.md)** instead of the GitHub preview, as the latter can show partial notebook.
+**It is highly recommended to use the [compiled markdown version](markdown/02_exploratory_data_analysis.md)** instead of the GitHub preview, as the latter can show partial notebook.
 
 ## In this notebook
 
@@ -106,257 +106,257 @@ AV.AutoViz('data/01_data_preparation/data_preparation.csv')
 
 
 <style type="text/css">
-#T_2662f_row0_col0, #T_2662f_row0_col2, #T_2662f_row0_col3, #T_2662f_row0_col4, #T_2662f_row0_col5, #T_2662f_row1_col0, #T_2662f_row1_col2, #T_2662f_row1_col3, #T_2662f_row1_col4, #T_2662f_row1_col5, #T_2662f_row2_col0, #T_2662f_row2_col2, #T_2662f_row2_col3, #T_2662f_row2_col4, #T_2662f_row2_col5, #T_2662f_row3_col0, #T_2662f_row3_col2, #T_2662f_row3_col3, #T_2662f_row3_col4, #T_2662f_row3_col5, #T_2662f_row4_col0, #T_2662f_row4_col2, #T_2662f_row4_col3, #T_2662f_row4_col4, #T_2662f_row4_col5, #T_2662f_row5_col0, #T_2662f_row5_col2, #T_2662f_row5_col3, #T_2662f_row5_col4, #T_2662f_row5_col5, #T_2662f_row6_col0, #T_2662f_row6_col2, #T_2662f_row6_col3, #T_2662f_row6_col4, #T_2662f_row6_col5, #T_2662f_row7_col0, #T_2662f_row7_col2, #T_2662f_row7_col3, #T_2662f_row7_col4, #T_2662f_row7_col5, #T_2662f_row8_col0, #T_2662f_row8_col2, #T_2662f_row8_col3, #T_2662f_row8_col4, #T_2662f_row8_col5, #T_2662f_row9_col0, #T_2662f_row9_col2, #T_2662f_row9_col3, #T_2662f_row9_col4, #T_2662f_row9_col5, #T_2662f_row10_col0, #T_2662f_row10_col2, #T_2662f_row10_col3, #T_2662f_row10_col4, #T_2662f_row10_col5, #T_2662f_row11_col0, #T_2662f_row11_col2, #T_2662f_row11_col3, #T_2662f_row11_col4, #T_2662f_row11_col5, #T_2662f_row12_col0, #T_2662f_row12_col2, #T_2662f_row12_col3, #T_2662f_row12_col4, #T_2662f_row12_col5, #T_2662f_row13_col0, #T_2662f_row13_col2, #T_2662f_row13_col3, #T_2662f_row13_col4, #T_2662f_row13_col5, #T_2662f_row14_col0, #T_2662f_row14_col2, #T_2662f_row14_col3, #T_2662f_row14_col4, #T_2662f_row14_col5, #T_2662f_row15_col0, #T_2662f_row15_col2, #T_2662f_row15_col3, #T_2662f_row15_col4, #T_2662f_row15_col5, #T_2662f_row16_col0, #T_2662f_row16_col2, #T_2662f_row16_col3, #T_2662f_row16_col4, #T_2662f_row16_col5, #T_2662f_row17_col0, #T_2662f_row17_col2, #T_2662f_row17_col3, #T_2662f_row17_col4, #T_2662f_row17_col5, #T_2662f_row18_col0, #T_2662f_row18_col2, #T_2662f_row18_col3, #T_2662f_row18_col4, #T_2662f_row18_col5, #T_2662f_row19_col0, #T_2662f_row19_col2, #T_2662f_row19_col3, #T_2662f_row19_col4, #T_2662f_row19_col5, #T_2662f_row20_col0, #T_2662f_row20_col2, #T_2662f_row20_col3, #T_2662f_row20_col4, #T_2662f_row20_col5, #T_2662f_row21_col0, #T_2662f_row21_col2, #T_2662f_row21_col3, #T_2662f_row21_col4, #T_2662f_row21_col5, #T_2662f_row22_col0, #T_2662f_row22_col2, #T_2662f_row22_col3, #T_2662f_row22_col4, #T_2662f_row22_col5, #T_2662f_row23_col0, #T_2662f_row23_col2, #T_2662f_row23_col3, #T_2662f_row23_col4, #T_2662f_row23_col5, #T_2662f_row24_col0, #T_2662f_row24_col2, #T_2662f_row24_col3, #T_2662f_row24_col4, #T_2662f_row24_col5 {
+#T_54dd8_row0_col0, #T_54dd8_row0_col2, #T_54dd8_row0_col3, #T_54dd8_row0_col4, #T_54dd8_row0_col5, #T_54dd8_row1_col0, #T_54dd8_row1_col2, #T_54dd8_row1_col3, #T_54dd8_row1_col4, #T_54dd8_row1_col5, #T_54dd8_row2_col0, #T_54dd8_row2_col2, #T_54dd8_row2_col3, #T_54dd8_row2_col4, #T_54dd8_row2_col5, #T_54dd8_row3_col0, #T_54dd8_row3_col2, #T_54dd8_row3_col3, #T_54dd8_row3_col4, #T_54dd8_row3_col5, #T_54dd8_row4_col0, #T_54dd8_row4_col2, #T_54dd8_row4_col3, #T_54dd8_row4_col4, #T_54dd8_row4_col5, #T_54dd8_row5_col0, #T_54dd8_row5_col2, #T_54dd8_row5_col3, #T_54dd8_row5_col4, #T_54dd8_row5_col5, #T_54dd8_row6_col0, #T_54dd8_row6_col2, #T_54dd8_row6_col3, #T_54dd8_row6_col4, #T_54dd8_row6_col5, #T_54dd8_row7_col0, #T_54dd8_row7_col2, #T_54dd8_row7_col3, #T_54dd8_row7_col4, #T_54dd8_row7_col5, #T_54dd8_row8_col0, #T_54dd8_row8_col2, #T_54dd8_row8_col3, #T_54dd8_row8_col4, #T_54dd8_row8_col5, #T_54dd8_row9_col0, #T_54dd8_row9_col2, #T_54dd8_row9_col3, #T_54dd8_row9_col4, #T_54dd8_row9_col5, #T_54dd8_row10_col0, #T_54dd8_row10_col2, #T_54dd8_row10_col3, #T_54dd8_row10_col4, #T_54dd8_row10_col5, #T_54dd8_row11_col0, #T_54dd8_row11_col2, #T_54dd8_row11_col3, #T_54dd8_row11_col4, #T_54dd8_row11_col5, #T_54dd8_row12_col0, #T_54dd8_row12_col2, #T_54dd8_row12_col3, #T_54dd8_row12_col4, #T_54dd8_row12_col5, #T_54dd8_row13_col0, #T_54dd8_row13_col2, #T_54dd8_row13_col3, #T_54dd8_row13_col4, #T_54dd8_row13_col5, #T_54dd8_row14_col0, #T_54dd8_row14_col2, #T_54dd8_row14_col3, #T_54dd8_row14_col4, #T_54dd8_row14_col5, #T_54dd8_row15_col0, #T_54dd8_row15_col2, #T_54dd8_row15_col3, #T_54dd8_row15_col4, #T_54dd8_row15_col5, #T_54dd8_row16_col0, #T_54dd8_row16_col2, #T_54dd8_row16_col3, #T_54dd8_row16_col4, #T_54dd8_row16_col5, #T_54dd8_row17_col0, #T_54dd8_row17_col2, #T_54dd8_row17_col3, #T_54dd8_row17_col4, #T_54dd8_row17_col5, #T_54dd8_row18_col0, #T_54dd8_row18_col2, #T_54dd8_row18_col3, #T_54dd8_row18_col4, #T_54dd8_row18_col5, #T_54dd8_row19_col0, #T_54dd8_row19_col2, #T_54dd8_row19_col3, #T_54dd8_row19_col4, #T_54dd8_row19_col5, #T_54dd8_row20_col0, #T_54dd8_row20_col2, #T_54dd8_row20_col3, #T_54dd8_row20_col4, #T_54dd8_row20_col5, #T_54dd8_row21_col0, #T_54dd8_row21_col2, #T_54dd8_row21_col3, #T_54dd8_row21_col4, #T_54dd8_row21_col5, #T_54dd8_row22_col0, #T_54dd8_row22_col2, #T_54dd8_row22_col3, #T_54dd8_row22_col4, #T_54dd8_row22_col5, #T_54dd8_row23_col0, #T_54dd8_row23_col2, #T_54dd8_row23_col3, #T_54dd8_row23_col4, #T_54dd8_row23_col5, #T_54dd8_row24_col0, #T_54dd8_row24_col2, #T_54dd8_row24_col3, #T_54dd8_row24_col4, #T_54dd8_row24_col5 {
   font-family: Segoe UI;
 }
-#T_2662f_row0_col1, #T_2662f_row1_col1, #T_2662f_row3_col1, #T_2662f_row4_col1, #T_2662f_row5_col1, #T_2662f_row6_col1, #T_2662f_row7_col1, #T_2662f_row8_col1, #T_2662f_row9_col1, #T_2662f_row10_col1, #T_2662f_row11_col1, #T_2662f_row12_col1, #T_2662f_row13_col1, #T_2662f_row14_col1, #T_2662f_row15_col1, #T_2662f_row16_col1, #T_2662f_row17_col1, #T_2662f_row18_col1, #T_2662f_row19_col1, #T_2662f_row20_col1, #T_2662f_row21_col1, #T_2662f_row22_col1, #T_2662f_row23_col1, #T_2662f_row24_col1 {
+#T_54dd8_row0_col1, #T_54dd8_row1_col1, #T_54dd8_row3_col1, #T_54dd8_row4_col1, #T_54dd8_row5_col1, #T_54dd8_row6_col1, #T_54dd8_row7_col1, #T_54dd8_row8_col1, #T_54dd8_row9_col1, #T_54dd8_row10_col1, #T_54dd8_row11_col1, #T_54dd8_row12_col1, #T_54dd8_row13_col1, #T_54dd8_row14_col1, #T_54dd8_row15_col1, #T_54dd8_row16_col1, #T_54dd8_row17_col1, #T_54dd8_row18_col1, #T_54dd8_row19_col1, #T_54dd8_row20_col1, #T_54dd8_row21_col1, #T_54dd8_row22_col1, #T_54dd8_row23_col1, #T_54dd8_row24_col1 {
   background-color: #fff5f0;
   color: #000000;
   font-family: Segoe UI;
 }
-#T_2662f_row2_col1 {
+#T_54dd8_row2_col1 {
   background-color: #67000d;
   color: #f1f1f1;
   font-family: Segoe UI;
 }
 </style>
-<table id="T_2662f">
+<table id="T_54dd8">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_2662f_level0_col0" class="col_heading level0 col0" >Data Type</th>
-      <th id="T_2662f_level0_col1" class="col_heading level0 col1" >Missing Values%</th>
-      <th id="T_2662f_level0_col2" class="col_heading level0 col2" >Unique Values%</th>
-      <th id="T_2662f_level0_col3" class="col_heading level0 col3" >Minimum Value</th>
-      <th id="T_2662f_level0_col4" class="col_heading level0 col4" >Maximum Value</th>
-      <th id="T_2662f_level0_col5" class="col_heading level0 col5" >DQ Issue</th>
+      <th id="T_54dd8_level0_col0" class="col_heading level0 col0" >Data Type</th>
+      <th id="T_54dd8_level0_col1" class="col_heading level0 col1" >Missing Values%</th>
+      <th id="T_54dd8_level0_col2" class="col_heading level0 col2" >Unique Values%</th>
+      <th id="T_54dd8_level0_col3" class="col_heading level0 col3" >Minimum Value</th>
+      <th id="T_54dd8_level0_col4" class="col_heading level0 col4" >Maximum Value</th>
+      <th id="T_54dd8_level0_col5" class="col_heading level0 col5" >DQ Issue</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_2662f_level0_row0" class="row_heading level0 row0" >Unnamed: 0</th>
-      <td id="T_2662f_row0_col0" class="data row0 col0" >int64</td>
-      <td id="T_2662f_row0_col1" class="data row0 col1" >0.000000</td>
-      <td id="T_2662f_row0_col2" class="data row0 col2" >100</td>
-      <td id="T_2662f_row0_col3" class="data row0 col3" >0.000000</td>
-      <td id="T_2662f_row0_col4" class="data row0 col4" >28355.000000</td>
-      <td id="T_2662f_row0_col5" class="data row0 col5" >Possible ID column: drop before modeling step.</td>
+      <th id="T_54dd8_level0_row0" class="row_heading level0 row0" >Unnamed: 0</th>
+      <td id="T_54dd8_row0_col0" class="data row0 col0" >int64</td>
+      <td id="T_54dd8_row0_col1" class="data row0 col1" >0.000000</td>
+      <td id="T_54dd8_row0_col2" class="data row0 col2" >100</td>
+      <td id="T_54dd8_row0_col3" class="data row0 col3" >0.000000</td>
+      <td id="T_54dd8_row0_col4" class="data row0 col4" >28355.000000</td>
+      <td id="T_54dd8_row0_col5" class="data row0 col5" >Possible ID column: drop before modeling step.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row1" class="row_heading level0 row1" >track_id</th>
-      <td id="T_2662f_row1_col0" class="data row1 col0" >object</td>
-      <td id="T_2662f_row1_col1" class="data row1 col1" >0.000000</td>
-      <td id="T_2662f_row1_col2" class="data row1 col2" >100</td>
-      <td id="T_2662f_row1_col3" class="data row1 col3" ></td>
-      <td id="T_2662f_row1_col4" class="data row1 col4" ></td>
-      <td id="T_2662f_row1_col5" class="data row1 col5" >Possible ID column: drop before modeling step.</td>
+      <th id="T_54dd8_level0_row1" class="row_heading level0 row1" >track_id</th>
+      <td id="T_54dd8_row1_col0" class="data row1 col0" >object</td>
+      <td id="T_54dd8_row1_col1" class="data row1 col1" >0.000000</td>
+      <td id="T_54dd8_row1_col2" class="data row1 col2" >100</td>
+      <td id="T_54dd8_row1_col3" class="data row1 col3" ></td>
+      <td id="T_54dd8_row1_col4" class="data row1 col4" ></td>
+      <td id="T_54dd8_row1_col5" class="data row1 col5" >Possible ID column: drop before modeling step.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row2" class="row_heading level0 row2" >track_artist</th>
-      <td id="T_2662f_row2_col0" class="data row2 col0" >object</td>
-      <td id="T_2662f_row2_col1" class="data row2 col1" >0.014106</td>
-      <td id="T_2662f_row2_col2" class="data row2 col2" >37</td>
-      <td id="T_2662f_row2_col3" class="data row2 col3" ></td>
-      <td id="T_2662f_row2_col4" class="data row2 col4" ></td>
-      <td id="T_2662f_row2_col5" class="data row2 col5" >4 missing values. Impute them with mean, median, mode, or a constant value such as 123., Mixed dtypes: has 2 different data types:  object, float,</td>
+      <th id="T_54dd8_level0_row2" class="row_heading level0 row2" >track_artist</th>
+      <td id="T_54dd8_row2_col0" class="data row2 col0" >object</td>
+      <td id="T_54dd8_row2_col1" class="data row2 col1" >0.014106</td>
+      <td id="T_54dd8_row2_col2" class="data row2 col2" >37</td>
+      <td id="T_54dd8_row2_col3" class="data row2 col3" ></td>
+      <td id="T_54dd8_row2_col4" class="data row2 col4" ></td>
+      <td id="T_54dd8_row2_col5" class="data row2 col5" >4 missing values. Impute them with mean, median, mode, or a constant value such as 123., Mixed dtypes: has 2 different data types:  object, float,</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row3" class="row_heading level0 row3" >track_popularity</th>
-      <td id="T_2662f_row3_col0" class="data row3 col0" >int64</td>
-      <td id="T_2662f_row3_col1" class="data row3 col1" >0.000000</td>
-      <td id="T_2662f_row3_col2" class="data row3 col2" >0</td>
-      <td id="T_2662f_row3_col3" class="data row3 col3" >0.000000</td>
-      <td id="T_2662f_row3_col4" class="data row3 col4" >100.000000</td>
-      <td id="T_2662f_row3_col5" class="data row3 col5" >No issue</td>
+      <th id="T_54dd8_level0_row3" class="row_heading level0 row3" >track_popularity</th>
+      <td id="T_54dd8_row3_col0" class="data row3 col0" >int64</td>
+      <td id="T_54dd8_row3_col1" class="data row3 col1" >0.000000</td>
+      <td id="T_54dd8_row3_col2" class="data row3 col2" >0</td>
+      <td id="T_54dd8_row3_col3" class="data row3 col3" >0.000000</td>
+      <td id="T_54dd8_row3_col4" class="data row3 col4" >100.000000</td>
+      <td id="T_54dd8_row3_col5" class="data row3 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row4" class="row_heading level0 row4" >track_album_id</th>
-      <td id="T_2662f_row4_col0" class="data row4 col0" >object</td>
-      <td id="T_2662f_row4_col1" class="data row4 col1" >0.000000</td>
-      <td id="T_2662f_row4_col2" class="data row4 col2" >79</td>
-      <td id="T_2662f_row4_col3" class="data row4 col3" ></td>
-      <td id="T_2662f_row4_col4" class="data row4 col4" ></td>
-      <td id="T_2662f_row4_col5" class="data row4 col5" >No issue</td>
+      <th id="T_54dd8_level0_row4" class="row_heading level0 row4" >track_album_id</th>
+      <td id="T_54dd8_row4_col0" class="data row4 col0" >object</td>
+      <td id="T_54dd8_row4_col1" class="data row4 col1" >0.000000</td>
+      <td id="T_54dd8_row4_col2" class="data row4 col2" >79</td>
+      <td id="T_54dd8_row4_col3" class="data row4 col3" ></td>
+      <td id="T_54dd8_row4_col4" class="data row4 col4" ></td>
+      <td id="T_54dd8_row4_col5" class="data row4 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row5" class="row_heading level0 row5" >track_album_release_date</th>
-      <td id="T_2662f_row5_col0" class="data row5 col0" >object</td>
-      <td id="T_2662f_row5_col1" class="data row5 col1" >0.000000</td>
-      <td id="T_2662f_row5_col2" class="data row5 col2" >15</td>
-      <td id="T_2662f_row5_col3" class="data row5 col3" ></td>
-      <td id="T_2662f_row5_col4" class="data row5 col4" ></td>
-      <td id="T_2662f_row5_col5" class="data row5 col5" >No issue</td>
+      <th id="T_54dd8_level0_row5" class="row_heading level0 row5" >track_album_release_date</th>
+      <td id="T_54dd8_row5_col0" class="data row5 col0" >object</td>
+      <td id="T_54dd8_row5_col1" class="data row5 col1" >0.000000</td>
+      <td id="T_54dd8_row5_col2" class="data row5 col2" >15</td>
+      <td id="T_54dd8_row5_col3" class="data row5 col3" ></td>
+      <td id="T_54dd8_row5_col4" class="data row5 col4" ></td>
+      <td id="T_54dd8_row5_col5" class="data row5 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row6" class="row_heading level0 row6" >danceability</th>
-      <td id="T_2662f_row6_col0" class="data row6 col0" >float64</td>
-      <td id="T_2662f_row6_col1" class="data row6 col1" >0.000000</td>
-      <td id="T_2662f_row6_col2" class="data row6 col2" >NA</td>
-      <td id="T_2662f_row6_col3" class="data row6 col3" >0.000000</td>
-      <td id="T_2662f_row6_col4" class="data row6 col4" >0.983000</td>
-      <td id="T_2662f_row6_col5" class="data row6 col5" >Column has 257 outliers greater than upper bound (1.06) or lower than lower bound(0.26). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row6" class="row_heading level0 row6" >danceability</th>
+      <td id="T_54dd8_row6_col0" class="data row6 col0" >float64</td>
+      <td id="T_54dd8_row6_col1" class="data row6 col1" >0.000000</td>
+      <td id="T_54dd8_row6_col2" class="data row6 col2" >NA</td>
+      <td id="T_54dd8_row6_col3" class="data row6 col3" >0.000000</td>
+      <td id="T_54dd8_row6_col4" class="data row6 col4" >0.983000</td>
+      <td id="T_54dd8_row6_col5" class="data row6 col5" >Column has 257 outliers greater than upper bound (1.06) or lower than lower bound(0.26). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row7" class="row_heading level0 row7" >energy</th>
-      <td id="T_2662f_row7_col0" class="data row7 col0" >float64</td>
-      <td id="T_2662f_row7_col1" class="data row7 col1" >0.000000</td>
-      <td id="T_2662f_row7_col2" class="data row7 col2" >NA</td>
-      <td id="T_2662f_row7_col3" class="data row7 col3" >0.000175</td>
-      <td id="T_2662f_row7_col4" class="data row7 col4" >1.000000</td>
-      <td id="T_2662f_row7_col5" class="data row7 col5" >Column has 222 outliers greater than upper bound (1.24) or lower than lower bound(0.18). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row7" class="row_heading level0 row7" >energy</th>
+      <td id="T_54dd8_row7_col0" class="data row7 col0" >float64</td>
+      <td id="T_54dd8_row7_col1" class="data row7 col1" >0.000000</td>
+      <td id="T_54dd8_row7_col2" class="data row7 col2" >NA</td>
+      <td id="T_54dd8_row7_col3" class="data row7 col3" >0.000175</td>
+      <td id="T_54dd8_row7_col4" class="data row7 col4" >1.000000</td>
+      <td id="T_54dd8_row7_col5" class="data row7 col5" >Column has 222 outliers greater than upper bound (1.24) or lower than lower bound(0.18). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row8" class="row_heading level0 row8" >key</th>
-      <td id="T_2662f_row8_col0" class="data row8 col0" >int64</td>
-      <td id="T_2662f_row8_col1" class="data row8 col1" >0.000000</td>
-      <td id="T_2662f_row8_col2" class="data row8 col2" >0</td>
-      <td id="T_2662f_row8_col3" class="data row8 col3" >0.000000</td>
-      <td id="T_2662f_row8_col4" class="data row8 col4" >11.000000</td>
-      <td id="T_2662f_row8_col5" class="data row8 col5" >No issue</td>
+      <th id="T_54dd8_level0_row8" class="row_heading level0 row8" >key</th>
+      <td id="T_54dd8_row8_col0" class="data row8 col0" >int64</td>
+      <td id="T_54dd8_row8_col1" class="data row8 col1" >0.000000</td>
+      <td id="T_54dd8_row8_col2" class="data row8 col2" >0</td>
+      <td id="T_54dd8_row8_col3" class="data row8 col3" >0.000000</td>
+      <td id="T_54dd8_row8_col4" class="data row8 col4" >11.000000</td>
+      <td id="T_54dd8_row8_col5" class="data row8 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row9" class="row_heading level0 row9" >loudness</th>
-      <td id="T_2662f_row9_col0" class="data row9 col0" >float64</td>
-      <td id="T_2662f_row9_col1" class="data row9 col1" >0.000000</td>
-      <td id="T_2662f_row9_col2" class="data row9 col2" >NA</td>
-      <td id="T_2662f_row9_col3" class="data row9 col3" >-46.448000</td>
-      <td id="T_2662f_row9_col4" class="data row9 col4" >1.275000</td>
-      <td id="T_2662f_row9_col5" class="data row9 col5" >Column has 837 outliers greater than upper bound (0.69) or lower than lower bound(-13.71). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row9" class="row_heading level0 row9" >loudness</th>
+      <td id="T_54dd8_row9_col0" class="data row9 col0" >float64</td>
+      <td id="T_54dd8_row9_col1" class="data row9 col1" >0.000000</td>
+      <td id="T_54dd8_row9_col2" class="data row9 col2" >NA</td>
+      <td id="T_54dd8_row9_col3" class="data row9 col3" >-46.448000</td>
+      <td id="T_54dd8_row9_col4" class="data row9 col4" >1.275000</td>
+      <td id="T_54dd8_row9_col5" class="data row9 col5" >Column has 837 outliers greater than upper bound (0.69) or lower than lower bound(-13.71). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row10" class="row_heading level0 row10" >mode</th>
-      <td id="T_2662f_row10_col0" class="data row10 col0" >int64</td>
-      <td id="T_2662f_row10_col1" class="data row10 col1" >0.000000</td>
-      <td id="T_2662f_row10_col2" class="data row10 col2" >0</td>
-      <td id="T_2662f_row10_col3" class="data row10 col3" >0.000000</td>
-      <td id="T_2662f_row10_col4" class="data row10 col4" >1.000000</td>
-      <td id="T_2662f_row10_col5" class="data row10 col5" >No issue</td>
+      <th id="T_54dd8_level0_row10" class="row_heading level0 row10" >mode</th>
+      <td id="T_54dd8_row10_col0" class="data row10 col0" >int64</td>
+      <td id="T_54dd8_row10_col1" class="data row10 col1" >0.000000</td>
+      <td id="T_54dd8_row10_col2" class="data row10 col2" >0</td>
+      <td id="T_54dd8_row10_col3" class="data row10 col3" >0.000000</td>
+      <td id="T_54dd8_row10_col4" class="data row10 col4" >1.000000</td>
+      <td id="T_54dd8_row10_col5" class="data row10 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row11" class="row_heading level0 row11" >speechiness</th>
-      <td id="T_2662f_row11_col0" class="data row11 col0" >float64</td>
-      <td id="T_2662f_row11_col1" class="data row11 col1" >0.000000</td>
-      <td id="T_2662f_row11_col2" class="data row11 col2" >NA</td>
-      <td id="T_2662f_row11_col3" class="data row11 col3" >0.000000</td>
-      <td id="T_2662f_row11_col4" class="data row11 col4" >0.918000</td>
-      <td id="T_2662f_row11_col5" class="data row11 col5" >Column has 2725 outliers greater than upper bound (0.27) or lower than lower bound(-0.10). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row11" class="row_heading level0 row11" >speechiness</th>
+      <td id="T_54dd8_row11_col0" class="data row11 col0" >float64</td>
+      <td id="T_54dd8_row11_col1" class="data row11 col1" >0.000000</td>
+      <td id="T_54dd8_row11_col2" class="data row11 col2" >NA</td>
+      <td id="T_54dd8_row11_col3" class="data row11 col3" >0.000000</td>
+      <td id="T_54dd8_row11_col4" class="data row11 col4" >0.918000</td>
+      <td id="T_54dd8_row11_col5" class="data row11 col5" >Column has 2725 outliers greater than upper bound (0.27) or lower than lower bound(-0.10). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row12" class="row_heading level0 row12" >acousticness</th>
-      <td id="T_2662f_row12_col0" class="data row12 col0" >float64</td>
-      <td id="T_2662f_row12_col1" class="data row12 col1" >0.000000</td>
-      <td id="T_2662f_row12_col2" class="data row12 col2" >NA</td>
-      <td id="T_2662f_row12_col3" class="data row12 col3" >0.000000</td>
-      <td id="T_2662f_row12_col4" class="data row12 col4" >0.994000</td>
-      <td id="T_2662f_row12_col5" class="data row12 col5" >Column has 1911 outliers greater than upper bound (0.63) or lower than lower bound(-0.35). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row12" class="row_heading level0 row12" >acousticness</th>
+      <td id="T_54dd8_row12_col0" class="data row12 col0" >float64</td>
+      <td id="T_54dd8_row12_col1" class="data row12 col1" >0.000000</td>
+      <td id="T_54dd8_row12_col2" class="data row12 col2" >NA</td>
+      <td id="T_54dd8_row12_col3" class="data row12 col3" >0.000000</td>
+      <td id="T_54dd8_row12_col4" class="data row12 col4" >0.994000</td>
+      <td id="T_54dd8_row12_col5" class="data row12 col5" >Column has 1911 outliers greater than upper bound (0.63) or lower than lower bound(-0.35). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row13" class="row_heading level0 row13" >instrumentalness</th>
-      <td id="T_2662f_row13_col0" class="data row13 col0" >float64</td>
-      <td id="T_2662f_row13_col1" class="data row13 col1" >0.000000</td>
-      <td id="T_2662f_row13_col2" class="data row13 col2" >NA</td>
-      <td id="T_2662f_row13_col3" class="data row13 col3" >0.000000</td>
-      <td id="T_2662f_row13_col4" class="data row13 col4" >0.994000</td>
-      <td id="T_2662f_row13_col5" class="data row13 col5" >Column has 6085 outliers greater than upper bound (0.02) or lower than lower bound(-0.01). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row13" class="row_heading level0 row13" >instrumentalness</th>
+      <td id="T_54dd8_row13_col0" class="data row13 col0" >float64</td>
+      <td id="T_54dd8_row13_col1" class="data row13 col1" >0.000000</td>
+      <td id="T_54dd8_row13_col2" class="data row13 col2" >NA</td>
+      <td id="T_54dd8_row13_col3" class="data row13 col3" >0.000000</td>
+      <td id="T_54dd8_row13_col4" class="data row13 col4" >0.994000</td>
+      <td id="T_54dd8_row13_col5" class="data row13 col5" >Column has 6085 outliers greater than upper bound (0.02) or lower than lower bound(-0.01). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row14" class="row_heading level0 row14" >liveness</th>
-      <td id="T_2662f_row14_col0" class="data row14 col0" >float64</td>
-      <td id="T_2662f_row14_col1" class="data row14 col1" >0.000000</td>
-      <td id="T_2662f_row14_col2" class="data row14 col2" >NA</td>
-      <td id="T_2662f_row14_col3" class="data row14 col3" >0.000000</td>
-      <td id="T_2662f_row14_col4" class="data row14 col4" >0.996000</td>
-      <td id="T_2662f_row14_col5" class="data row14 col5" >Column has 1623 outliers greater than upper bound (0.48) or lower than lower bound(-0.14). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row14" class="row_heading level0 row14" >liveness</th>
+      <td id="T_54dd8_row14_col0" class="data row14 col0" >float64</td>
+      <td id="T_54dd8_row14_col1" class="data row14 col1" >0.000000</td>
+      <td id="T_54dd8_row14_col2" class="data row14 col2" >NA</td>
+      <td id="T_54dd8_row14_col3" class="data row14 col3" >0.000000</td>
+      <td id="T_54dd8_row14_col4" class="data row14 col4" >0.996000</td>
+      <td id="T_54dd8_row14_col5" class="data row14 col5" >Column has 1623 outliers greater than upper bound (0.48) or lower than lower bound(-0.14). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row15" class="row_heading level0 row15" >valence</th>
-      <td id="T_2662f_row15_col0" class="data row15 col0" >float64</td>
-      <td id="T_2662f_row15_col1" class="data row15 col1" >0.000000</td>
-      <td id="T_2662f_row15_col2" class="data row15 col2" >NA</td>
-      <td id="T_2662f_row15_col3" class="data row15 col3" >0.000000</td>
-      <td id="T_2662f_row15_col4" class="data row15 col4" >0.991000</td>
-      <td id="T_2662f_row15_col5" class="data row15 col5" >No issue</td>
+      <th id="T_54dd8_level0_row15" class="row_heading level0 row15" >valence</th>
+      <td id="T_54dd8_row15_col0" class="data row15 col0" >float64</td>
+      <td id="T_54dd8_row15_col1" class="data row15 col1" >0.000000</td>
+      <td id="T_54dd8_row15_col2" class="data row15 col2" >NA</td>
+      <td id="T_54dd8_row15_col3" class="data row15 col3" >0.000000</td>
+      <td id="T_54dd8_row15_col4" class="data row15 col4" >0.991000</td>
+      <td id="T_54dd8_row15_col5" class="data row15 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row16" class="row_heading level0 row16" >tempo</th>
-      <td id="T_2662f_row16_col0" class="data row16 col0" >float64</td>
-      <td id="T_2662f_row16_col1" class="data row16 col1" >0.000000</td>
-      <td id="T_2662f_row16_col2" class="data row16 col2" >NA</td>
-      <td id="T_2662f_row16_col3" class="data row16 col3" >0.000000</td>
-      <td id="T_2662f_row16_col4" class="data row16 col4" >239.440000</td>
-      <td id="T_2662f_row16_col5" class="data row16 col5" >Column has 494 outliers greater than upper bound (185.04) or lower than lower bound(48.93). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row16" class="row_heading level0 row16" >tempo</th>
+      <td id="T_54dd8_row16_col0" class="data row16 col0" >float64</td>
+      <td id="T_54dd8_row16_col1" class="data row16 col1" >0.000000</td>
+      <td id="T_54dd8_row16_col2" class="data row16 col2" >NA</td>
+      <td id="T_54dd8_row16_col3" class="data row16 col3" >0.000000</td>
+      <td id="T_54dd8_row16_col4" class="data row16 col4" >239.440000</td>
+      <td id="T_54dd8_row16_col5" class="data row16 col5" >Column has 494 outliers greater than upper bound (185.04) or lower than lower bound(48.93). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row17" class="row_heading level0 row17" >duration_ms</th>
-      <td id="T_2662f_row17_col0" class="data row17 col0" >int64</td>
-      <td id="T_2662f_row17_col1" class="data row17 col1" >0.000000</td>
-      <td id="T_2662f_row17_col2" class="data row17 col2" >69</td>
-      <td id="T_2662f_row17_col3" class="data row17 col3" >4000.000000</td>
-      <td id="T_2662f_row17_col4" class="data row17 col4" >517810.000000</td>
-      <td id="T_2662f_row17_col5" class="data row17 col5" >Column has 1197 outliers greater than upper bound (355825.12) or lower than lower bound(86892.12). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row17" class="row_heading level0 row17" >duration_ms</th>
+      <td id="T_54dd8_row17_col0" class="data row17 col0" >int64</td>
+      <td id="T_54dd8_row17_col1" class="data row17 col1" >0.000000</td>
+      <td id="T_54dd8_row17_col2" class="data row17 col2" >69</td>
+      <td id="T_54dd8_row17_col3" class="data row17 col3" >4000.000000</td>
+      <td id="T_54dd8_row17_col4" class="data row17 col4" >517810.000000</td>
+      <td id="T_54dd8_row17_col5" class="data row17 col5" >Column has 1197 outliers greater than upper bound (355825.12) or lower than lower bound(86892.12). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row18" class="row_heading level0 row18" >playlist_count</th>
-      <td id="T_2662f_row18_col0" class="data row18 col0" >int64</td>
-      <td id="T_2662f_row18_col1" class="data row18 col1" >0.000000</td>
-      <td id="T_2662f_row18_col2" class="data row18 col2" >0</td>
-      <td id="T_2662f_row18_col3" class="data row18 col3" >1.000000</td>
-      <td id="T_2662f_row18_col4" class="data row18 col4" >10.000000</td>
-      <td id="T_2662f_row18_col5" class="data row18 col5" >Column has 3166 outliers greater than upper bound (1.00) or lower than lower bound(1.00). Cap them or remove them.</td>
+      <th id="T_54dd8_level0_row18" class="row_heading level0 row18" >playlist_count</th>
+      <td id="T_54dd8_row18_col0" class="data row18 col0" >int64</td>
+      <td id="T_54dd8_row18_col1" class="data row18 col1" >0.000000</td>
+      <td id="T_54dd8_row18_col2" class="data row18 col2" >0</td>
+      <td id="T_54dd8_row18_col3" class="data row18 col3" >1.000000</td>
+      <td id="T_54dd8_row18_col4" class="data row18 col4" >10.000000</td>
+      <td id="T_54dd8_row18_col5" class="data row18 col5" >Column has 3166 outliers greater than upper bound (1.00) or lower than lower bound(1.00). Cap them or remove them.</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row19" class="row_heading level0 row19" >edm</th>
-      <td id="T_2662f_row19_col0" class="data row19 col0" >int64</td>
-      <td id="T_2662f_row19_col1" class="data row19 col1" >0.000000</td>
-      <td id="T_2662f_row19_col2" class="data row19 col2" >0</td>
-      <td id="T_2662f_row19_col3" class="data row19 col3" >0.000000</td>
-      <td id="T_2662f_row19_col4" class="data row19 col4" >1.000000</td>
-      <td id="T_2662f_row19_col5" class="data row19 col5" >No issue</td>
+      <th id="T_54dd8_level0_row19" class="row_heading level0 row19" >edm</th>
+      <td id="T_54dd8_row19_col0" class="data row19 col0" >int64</td>
+      <td id="T_54dd8_row19_col1" class="data row19 col1" >0.000000</td>
+      <td id="T_54dd8_row19_col2" class="data row19 col2" >0</td>
+      <td id="T_54dd8_row19_col3" class="data row19 col3" >0.000000</td>
+      <td id="T_54dd8_row19_col4" class="data row19 col4" >1.000000</td>
+      <td id="T_54dd8_row19_col5" class="data row19 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row20" class="row_heading level0 row20" >latin</th>
-      <td id="T_2662f_row20_col0" class="data row20 col0" >int64</td>
-      <td id="T_2662f_row20_col1" class="data row20 col1" >0.000000</td>
-      <td id="T_2662f_row20_col2" class="data row20 col2" >0</td>
-      <td id="T_2662f_row20_col3" class="data row20 col3" >0.000000</td>
-      <td id="T_2662f_row20_col4" class="data row20 col4" >1.000000</td>
-      <td id="T_2662f_row20_col5" class="data row20 col5" >No issue</td>
+      <th id="T_54dd8_level0_row20" class="row_heading level0 row20" >latin</th>
+      <td id="T_54dd8_row20_col0" class="data row20 col0" >int64</td>
+      <td id="T_54dd8_row20_col1" class="data row20 col1" >0.000000</td>
+      <td id="T_54dd8_row20_col2" class="data row20 col2" >0</td>
+      <td id="T_54dd8_row20_col3" class="data row20 col3" >0.000000</td>
+      <td id="T_54dd8_row20_col4" class="data row20 col4" >1.000000</td>
+      <td id="T_54dd8_row20_col5" class="data row20 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row21" class="row_heading level0 row21" >pop</th>
-      <td id="T_2662f_row21_col0" class="data row21 col0" >int64</td>
-      <td id="T_2662f_row21_col1" class="data row21 col1" >0.000000</td>
-      <td id="T_2662f_row21_col2" class="data row21 col2" >0</td>
-      <td id="T_2662f_row21_col3" class="data row21 col3" >0.000000</td>
-      <td id="T_2662f_row21_col4" class="data row21 col4" >1.000000</td>
-      <td id="T_2662f_row21_col5" class="data row21 col5" >No issue</td>
+      <th id="T_54dd8_level0_row21" class="row_heading level0 row21" >pop</th>
+      <td id="T_54dd8_row21_col0" class="data row21 col0" >int64</td>
+      <td id="T_54dd8_row21_col1" class="data row21 col1" >0.000000</td>
+      <td id="T_54dd8_row21_col2" class="data row21 col2" >0</td>
+      <td id="T_54dd8_row21_col3" class="data row21 col3" >0.000000</td>
+      <td id="T_54dd8_row21_col4" class="data row21 col4" >1.000000</td>
+      <td id="T_54dd8_row21_col5" class="data row21 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row22" class="row_heading level0 row22" >r&b</th>
-      <td id="T_2662f_row22_col0" class="data row22 col0" >int64</td>
-      <td id="T_2662f_row22_col1" class="data row22 col1" >0.000000</td>
-      <td id="T_2662f_row22_col2" class="data row22 col2" >0</td>
-      <td id="T_2662f_row22_col3" class="data row22 col3" >0.000000</td>
-      <td id="T_2662f_row22_col4" class="data row22 col4" >1.000000</td>
-      <td id="T_2662f_row22_col5" class="data row22 col5" >No issue</td>
+      <th id="T_54dd8_level0_row22" class="row_heading level0 row22" >r&b</th>
+      <td id="T_54dd8_row22_col0" class="data row22 col0" >int64</td>
+      <td id="T_54dd8_row22_col1" class="data row22 col1" >0.000000</td>
+      <td id="T_54dd8_row22_col2" class="data row22 col2" >0</td>
+      <td id="T_54dd8_row22_col3" class="data row22 col3" >0.000000</td>
+      <td id="T_54dd8_row22_col4" class="data row22 col4" >1.000000</td>
+      <td id="T_54dd8_row22_col5" class="data row22 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row23" class="row_heading level0 row23" >rap</th>
-      <td id="T_2662f_row23_col0" class="data row23 col0" >int64</td>
-      <td id="T_2662f_row23_col1" class="data row23 col1" >0.000000</td>
-      <td id="T_2662f_row23_col2" class="data row23 col2" >0</td>
-      <td id="T_2662f_row23_col3" class="data row23 col3" >0.000000</td>
-      <td id="T_2662f_row23_col4" class="data row23 col4" >1.000000</td>
-      <td id="T_2662f_row23_col5" class="data row23 col5" >No issue</td>
+      <th id="T_54dd8_level0_row23" class="row_heading level0 row23" >rap</th>
+      <td id="T_54dd8_row23_col0" class="data row23 col0" >int64</td>
+      <td id="T_54dd8_row23_col1" class="data row23 col1" >0.000000</td>
+      <td id="T_54dd8_row23_col2" class="data row23 col2" >0</td>
+      <td id="T_54dd8_row23_col3" class="data row23 col3" >0.000000</td>
+      <td id="T_54dd8_row23_col4" class="data row23 col4" >1.000000</td>
+      <td id="T_54dd8_row23_col5" class="data row23 col5" >No issue</td>
     </tr>
     <tr>
-      <th id="T_2662f_level0_row24" class="row_heading level0 row24" >rock</th>
-      <td id="T_2662f_row24_col0" class="data row24 col0" >int64</td>
-      <td id="T_2662f_row24_col1" class="data row24 col1" >0.000000</td>
-      <td id="T_2662f_row24_col2" class="data row24 col2" >0</td>
-      <td id="T_2662f_row24_col3" class="data row24 col3" >0.000000</td>
-      <td id="T_2662f_row24_col4" class="data row24 col4" >1.000000</td>
-      <td id="T_2662f_row24_col5" class="data row24 col5" >No issue</td>
+      <th id="T_54dd8_level0_row24" class="row_heading level0 row24" >rock</th>
+      <td id="T_54dd8_row24_col0" class="data row24 col0" >int64</td>
+      <td id="T_54dd8_row24_col1" class="data row24 col1" >0.000000</td>
+      <td id="T_54dd8_row24_col2" class="data row24 col2" >0</td>
+      <td id="T_54dd8_row24_col3" class="data row24 col3" >0.000000</td>
+      <td id="T_54dd8_row24_col4" class="data row24 col4" >1.000000</td>
+      <td id="T_54dd8_row24_col5" class="data row24 col5" >No issue</td>
     </tr>
   </tbody>
 </table>
@@ -495,7 +495,7 @@ AV.AutoViz('data/01_data_preparation/data_preparation.csv')
 
     Could not draw wordcloud plot for track_album_release_date. We need at least 1 word to plot a word cloud, got 0.
     All Plots done
-    Time to run AutoViz = 30 seconds 
+    Time to run AutoViz = 31 seconds 
     
      ###################### AUTO VISUALIZATION Completed ########################
 
@@ -1238,68 +1238,68 @@ pd.DataFrame(df_num.skew(),columns=['skewness']).sort_values(by='skewness', asce
 
 
 <style type="text/css">
-#T_0eecb_row0_col0, #T_0eecb_row1_col0, #T_0eecb_row2_col0, #T_0eecb_row3_col0, #T_0eecb_row4_col0, #T_0eecb_row5_col0 {
+#T_567b8_row0_col0, #T_567b8_row1_col0, #T_567b8_row2_col0, #T_567b8_row3_col0, #T_567b8_row4_col0, #T_567b8_row5_col0 {
   background-color: mediumspringgreen;
 }
-#T_0eecb_row11_col0 {
+#T_567b8_row11_col0 {
   background-color: hotpink;
 }
 </style>
-<table id="T_0eecb">
+<table id="T_567b8">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_0eecb_level0_col0" class="col_heading level0 col0" >skewness</th>
+      <th id="T_567b8_level0_col0" class="col_heading level0 col0" >skewness</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_0eecb_level0_row0" class="row_heading level0 row0" >playlist_count</th>
-      <td id="T_0eecb_row0_col0" class="data row0 col0" >5.481869</td>
+      <th id="T_567b8_level0_row0" class="row_heading level0 row0" >playlist_count</th>
+      <td id="T_567b8_row0_col0" class="data row0 col0" >5.481869</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row1" class="row_heading level0 row1" >instrumentalness</th>
-      <td id="T_0eecb_row1_col0" class="data row1 col0" >2.624985</td>
+      <th id="T_567b8_level0_row1" class="row_heading level0 row1" >instrumentalness</th>
+      <td id="T_567b8_row1_col0" class="data row1 col0" >2.624985</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row2" class="row_heading level0 row2" >liveness</th>
-      <td id="T_0eecb_row2_col0" class="data row2 col0" >2.081481</td>
+      <th id="T_567b8_level0_row2" class="row_heading level0 row2" >liveness</th>
+      <td id="T_567b8_row2_col0" class="data row2 col0" >2.081481</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row3" class="row_heading level0 row3" >speechiness</th>
-      <td id="T_0eecb_row3_col0" class="data row3 col0" >1.964975</td>
+      <th id="T_567b8_level0_row3" class="row_heading level0 row3" >speechiness</th>
+      <td id="T_567b8_row3_col0" class="data row3 col0" >1.964975</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row4" class="row_heading level0 row4" >acousticness</th>
-      <td id="T_0eecb_row4_col0" class="data row4 col0" >1.576720</td>
+      <th id="T_567b8_level0_row4" class="row_heading level0 row4" >acousticness</th>
+      <td id="T_567b8_row4_col0" class="data row4 col0" >1.576720</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row5" class="row_heading level0 row5" >duration_ms</th>
-      <td id="T_0eecb_row5_col0" class="data row5 col0" >1.115164</td>
+      <th id="T_567b8_level0_row5" class="row_heading level0 row5" >duration_ms</th>
+      <td id="T_567b8_row5_col0" class="data row5 col0" >1.115164</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row6" class="row_heading level0 row6" >tempo</th>
-      <td id="T_0eecb_row6_col0" class="data row6 col0" >0.513949</td>
+      <th id="T_567b8_level0_row6" class="row_heading level0 row6" >tempo</th>
+      <td id="T_567b8_row6_col0" class="data row6 col0" >0.513949</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row7" class="row_heading level0 row7" >valence</th>
-      <td id="T_0eecb_row7_col0" class="data row7 col0" >-0.007334</td>
+      <th id="T_567b8_level0_row7" class="row_heading level0 row7" >valence</th>
+      <td id="T_567b8_row7_col0" class="data row7 col0" >-0.007334</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row8" class="row_heading level0 row8" >track_popularity</th>
-      <td id="T_0eecb_row8_col0" class="data row8 col0" >-0.231350</td>
+      <th id="T_567b8_level0_row8" class="row_heading level0 row8" >track_popularity</th>
+      <td id="T_567b8_row8_col0" class="data row8 col0" >-0.231350</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row9" class="row_heading level0 row9" >danceability</th>
-      <td id="T_0eecb_row9_col0" class="data row9 col0" >-0.505789</td>
+      <th id="T_567b8_level0_row9" class="row_heading level0 row9" >danceability</th>
+      <td id="T_567b8_row9_col0" class="data row9 col0" >-0.505789</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row10" class="row_heading level0 row10" >energy</th>
-      <td id="T_0eecb_row10_col0" class="data row10 col0" >-0.645440</td>
+      <th id="T_567b8_level0_row10" class="row_heading level0 row10" >energy</th>
+      <td id="T_567b8_row10_col0" class="data row10 col0" >-0.645440</td>
     </tr>
     <tr>
-      <th id="T_0eecb_level0_row11" class="row_heading level0 row11" >loudness</th>
-      <td id="T_0eecb_row11_col0" class="data row11 col0" >-1.359303</td>
+      <th id="T_567b8_level0_row11" class="row_heading level0 row11" >loudness</th>
+      <td id="T_567b8_row11_col0" class="data row11 col0" >-1.359303</td>
     </tr>
   </tbody>
 </table>
