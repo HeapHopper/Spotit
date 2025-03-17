@@ -20,9 +20,9 @@ This notebook is long due to automatically generated plots.
 
 In this notebook we will do an Exploratory Data Analysis for the Spotify dataset. Using the Flat File from previous chapter we will explore the data to better understand its structure, quality and patterns before moving on to modeling.
 
-We will start with the Data Protocol, move on to reating data-relations reports automatically using AutoViz, and finish with applying descriptive statistics tools such as Skewness, ANOVA, correlations etc. to learn more about the data and its internal relations.
+We will start with the Data Protocol, move on to creating data-relations reports automatically using AutoViz, and finish with applying descriptive statistics tools such as Skewness, ANOVA, correlations etc. to learn more about the data and its internal relations.
 
-The analysis will be done for the target value, dummy columns, categorical columns and continous columns. Each type of data with its own unique analysis tools.
+The analysis will be done for the target value, dummy columns, categorical columns and continuous columns. Each type of data with its own unique analysis tools.
 
 
  
@@ -871,7 +871,7 @@ We will use statistical tools to better understand and explore the data. We will
 1. Exploring the **target value**
 2. Exploring **dummy** columns
 3. Exploring **category** columns
-4. Exploring **continous** columns
+4. Exploring **continuous** columns
 
 Each of the four types of data requires their own type of tools and statistical tests, as we will see shortly.
 
@@ -898,7 +898,7 @@ plt.show()
     
 
 
-Notice the high number of 0 popularity tracks. Spoiler alert: this data is valid, from recent years - and was not considerd as an outlier when looking for outliers.
+Notice the high number of 0 popularity tracks. Spoiler alert: this data is valid, from recent years - and was not considered as an outlier when looking for outliers.
 
 For now lets keep using the statistical tools, starting with skewness:
 
@@ -1137,7 +1137,7 @@ plt.show()
 
 ### Categorical columns
 
-Apperantly there is only one (non-dummy) categorical column - `key`:
+Apparently there is only one (non-dummy) categorical column - `key`:
 
 
 ```python
@@ -1158,7 +1158,7 @@ plt.show()
 
 ### Continues (numeric) column
 
-With continous data we have many statistical tools we can use. especially if the data is parametric - and fortunately there are parametric distributed features in our data..
+With continuous data we have many statistical tools we can use. especially if the data is parametric - and fortunately there are parametric distributed features in our data..
 
 
 ```python
@@ -1343,7 +1343,7 @@ plt.show()
 ### ANOVA
 
 Our data have a textbook use-case for the ANOVA statistical tool. 
-The genres are separate groups each with its own `track_popularity` distribution. Due to the large sample size and the fact that popularity distribution was already found to be parametric, we can use ANOVA to analyze the variance in popularitiy for each of the six main genres!
+The genres are separate groups each with its own `track_popularity` distribution. Due to the large sample size and the fact that popularity distribution was already found to be parametric, we can use ANOVA to analyze the variance in popularity for each of the six main genres!
 
 
 ```python
@@ -1454,6 +1454,6 @@ plt.show()
     
 
 
-It seems that the zero poppularity is actually a late years trend, this makes me more comfortable working with this data. 
+It seems that the zero popularity is actually a late years trend, this makes me more comfortable working with this data. 
 
 ![tobecontinued.jpg](02_exploratory_data_analysis_files/tobecontinued.jpg)

@@ -1,5 +1,15 @@
 # Data Cleansing
 
+
+```python
+# DS18 ML Essentials project
+# Module 3: Data Cleansing
+
+# Submitted by: Tzvi Eliezer Nir
+# mail: tzvienir@gmail.com
+# First submission: 17/03/2025
+```
+
 ## In this notebook
 
 The data cleansing process involves two main steps:
@@ -56,7 +66,7 @@ plt.show()
 
 
     
-![png](03_data_cleansing_files/03_data_cleansing_5_0.png)
+![png](03_data_cleansing_files/03_data_cleansing_6_0.png)
     
 
 
@@ -410,7 +420,7 @@ plt.show()
 
 
     
-![png](03_data_cleansing_files/03_data_cleansing_11_0.png)
+![png](03_data_cleansing_files/03_data_cleansing_12_0.png)
     
 
 
@@ -426,7 +436,7 @@ plt.show()
 
 
     
-![png](03_data_cleansing_files/03_data_cleansing_13_0.png)
+![png](03_data_cleansing_files/03_data_cleansing_14_0.png)
     
 
 
@@ -642,7 +652,7 @@ plt.show()
 
 
     
-![png](03_data_cleansing_files/03_data_cleansing_17_0.png)
+![png](03_data_cleansing_files/03_data_cleansing_18_0.png)
     
 
 
@@ -711,7 +721,7 @@ plt.show()
 
 
     
-![png](03_data_cleansing_files/03_data_cleansing_20_0.png)
+![png](03_data_cleansing_files/03_data_cleansing_21_0.png)
     
 
 
@@ -762,7 +772,7 @@ plt.show()
 
 
     
-![png](03_data_cleansing_files/03_data_cleansing_22_0.png)
+![png](03_data_cleansing_files/03_data_cleansing_23_0.png)
     
 
 
@@ -974,13 +984,13 @@ df_final['track_artist'].fillna('Anonymous Artist', inplace=True)
 df_final.head()
 ```
 
-    /tmp/ipykernel_13544/125457044.py:1: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+    /tmp/ipykernel_13544/1595701375.py:1: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
     The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
     
     For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
     
     
-      df_final['track_artist'].fillna('Anonymus Artist', inplace=True)
+      df_final['track_artist'].fillna('Anonymous Artist', inplace=True)
 
 
 

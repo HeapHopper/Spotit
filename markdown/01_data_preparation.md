@@ -18,9 +18,9 @@
 
 In this section we will load the dataset and see its basic structure: columns characteristics, shape, nulls, duplicates etc.
 
-The reasons we do this simple analysis now is to find where the data needs some preprocessing done - merging tables, handeling textual and categorical columns and more.
+The reasons we do this simple analysis now is to find where the data needs some preprocessing done - merging tables, handling textual and categorical columns and more.
 
-We will NOT however do any visual or computational EDA since this section is about prepering the dataset **to** the EDA.
+We will NOT however do any visual or computational EDA since this section is about preparing the dataset **to** the EDA.
 
 ### Load the dataset
 
@@ -671,7 +671,7 @@ missing_rows
 
 #### Handling missing values
 
-Althought there are good arguments to drop those rows now (missing crucial values, 0 popularity) the time for handling missing data will come in the **next** module. For now, this track identifiers, genres, popularity - useful data for ML models - so it stays.
+Although there are good arguments to drop those rows now (missing crucial values, 0 popularity) the time for handling missing data will come in the **next** module. For now, this track identifiers, genres, popularity - useful data for ML models - so it stays.
 
 ### Find duplicate tracks
 
@@ -730,7 +730,7 @@ This is important, because it means all we need to do to "merge" the duplicated 
 ## Clean Text
 
 In this section we will remove free-text categories to a separate `df_text` dataframe.
-This is crucial for the `playlist_name` column as its value may contain Emojis and other wildcard characters, but it is also useful to deal with `track_name` and `album_name`, and since those names are uniquley belongs to an ID we aren't loosing this data - we can always join back the tables based on the ID!
+This is crucial for the `playlist_name` column as its value may contain Emojis and other wildcard characters, but it is also useful to deal with `track_name` and `album_name`, and since those names are uniquely belongs to an ID we aren't loosing this data - we can always join back the tables based on the ID!
 
 
 ```python
@@ -776,7 +776,7 @@ df = df.drop(columns=['playlist_id'])
 
 After handling the `playlist_name` and `playlist_genre` column, all that left to deal with are the genres columns - and we can start merging the duplicated rows!
 
-Tracks appears in multiple playlists, usually have multiple associated genres - one from each playlist. By encoding the generes we will get replace the `playlist_genre` column with encoded colmuns that will make it possible to merge the rows without loosing data.
+Tracks appears in multiple playlists, usually have multiple associated genres - one from each playlist. By encoding the genres we will get replace the `playlist_genre` column with encoded columns that will make it possible to merge the rows without loosing data.
 
 ### Genres overview
 
@@ -853,7 +853,7 @@ There are six main genres, and 24 subgenres.
 
 We are going to do the encoding in **two phases**:
 
-1. We will use dummy encoding for the six main geners-
+1. We will use dummy encoding for the six main genres-
    we will create six new binary categories, each represents whether or not
    the track belongs to the genre.
 
@@ -862,7 +862,7 @@ We are going to do the encoding in **two phases**:
 2. We will not just throw the sub genres as we might find some usable information in there.
    
    For example, if a track has a main genre `rap` but a sub-genre **`hip pop`** (not **`hip hop`**!)
-   we can use this information to associtae the track with the `pop` genre as well (the `pop` dummy category will be `1`).
+   we can use this information to associate the track with the `pop` genre as well (the `pop` dummy category will be `1`).
 
 3. I will create a simple report to show how much the second phase changed the data.
 
@@ -886,7 +886,7 @@ df = df.drop(columns=['playlist_genre'])
 As mentioned earlier, I want to see how much the second encoding phase changed the data, so I will save the sum of "1" in each genre after the first phase.
 
 To get a valid report, we need to aggregate the duplicate rows and count their "1" in each genre.
-Since we didn't handle the subgenre yet, aggregating the original `df` will loose us some subgenre data - so we do this aggreagation in a copied dataset.
+Since we didn't handle the subgenre yet, aggregating the original `df` will loose us some subgenre data - so we do this aggregation in a copied dataset.
 
 Lets create the report:
 
@@ -907,7 +907,7 @@ print(genre_track_counts)
 
 ### Handling sub-genres
 
-As mentioned before, the sub genre column can help us more genres the track is associated with. The `playlist_genre` column force each track to have a single genre, but a track with sub-genre `pop edm` undoubtly belongs to both genres. And now after we have done dummy encoding we can set "1" to both genres - this is a some valuable data!
+As mentioned before, the sub genre column can help us more genres the track is associated with. The `playlist_genre` column force each track to have a single genre, but a track with sub-genre `pop edm` undoubtedly belongs to both genres. And now after we have done dummy encoding we can set "1" to both genres - this is a some valuable data!
 
 Below you can find a dictionary mapping a sub-genre to its main genres:
 
@@ -941,7 +941,7 @@ subgenre_to_genre = {
 }
 ```
 
-Now for each track we are gonne make sure that **all** associated genre dummies are set to `1` based on the sub-genre mapping:
+Now for each track we are going to make sure that **all** associated genre dummies are set to `1` based on the sub-genre mapping:
 
 
 ```python
@@ -957,7 +957,7 @@ Next, we can finally aggregate the duplicated data!
 df = df.groupby('track_id', as_index=False).max()
 ```
 
-Last, lets count the `1`'s in each genre after updating the dummy colmuns using the sub-genre data:
+Last, lets count the `1`'s in each genre after updating the dummy columns using the sub-genre data:
 
 
 ```python
@@ -975,7 +975,7 @@ print(genre_subgenre_track_counts)
 
 Lets show on a Bar Plot the amount of tracks in each genre before/after extracting additional genres from the sub-genres:
 
-*(I know i promised no visual EDA, but this is more about visualizing the changes in the dataset, not the data itself, so frogive me this time...)*
+*(I know i promised no visual EDA, but this is more about visualizing the changes in the dataset, not the data itself, so forgive me this time...)*
 
 
 ```python
@@ -1042,7 +1042,7 @@ The `def convert_dates()` is used for an edge case where the release date is jus
 
 I set as a default for those cases that the date should be 01/01 of that particular year.
 
-Notice how I didn't break down the `datetime` into seperate year, month, day colums - as this will be considered feature engineering and we are still at the data preparation part of this project.
+Notice how I didn't break down the `datetime` into separate year, month, day columns - as this will be considered feature engineering and we are still at the data preparation part of this project.
 
 ## Save as pickle and CSV
 
@@ -1053,7 +1053,7 @@ We finished the data preparation part! It is time to store the df as a pickle fi
 df.to_pickle('pickle/01_data_preparation/data_preparation.pkl')
 ```
 
-Since `.pkl` files are large binary files, it is genrally not recommended to store them in a git repository.
+Since `.pkl` files are large binary files, it is generally not recommended to store them in a git repository.
 
 Since my project is being managed with git, I will create a `.csv` file which is large but at least textual, and this file will be part of the git repo:
 
@@ -1070,7 +1070,7 @@ Lets summarize the main actions I took in the data preparation process:
 
 1. Got a first impression of the dataset: shape, columns, looked for missing and duplicate values.
 2. Moved textual columns to a separate `df_text` column.
-3. Droped `playlist_id` and instead count `playlist_count` appearances.
+3. Dropped `playlist_id` and instead count `playlist_count` appearances.
 4. Encoded the `playlist_genre` into dummy columns and extracted additional genre association from `playlist_subgenre`
 5. Converted `track_album_release_date` into a `datetime` type
 6. Saved the result `df` as a pickle for future use, and also as CSV for git.
