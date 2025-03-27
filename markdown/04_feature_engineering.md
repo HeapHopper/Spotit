@@ -366,7 +366,7 @@ But wait, isn't this contribution redundant since we already created a `Decade` 
 
 ## Analyzing `track_name` text attributes
 
-Back in [data preparation](01_data_preparation.ipynb) we moved all textual features to a separate dataframe - `df_text`. Now its last call to get some meaningful data out of the textual columns, after this step we will officially say goodbye. 
+Back in [data preparation](01_data_preparation.ipynb), we moved all text-based features into a separate dataframe called `df_text`. This is our last chance to extract some useful insights from these text columns before we drop them for good.
 
 ![My_Time_Has_Come.jpg](04_feature_engineering_files/My_Time_Has_Come.jpg)
 
@@ -521,10 +521,10 @@ df_text.sample(20)
   </thead>
   <tbody>
     <tr>
-      <th>31889</th>
-      <td>10hzmHJ08ua88sPy5RIxiL</td>
-      <td>Dump Party - Radio Mix</td>
-      <td>Most Wanted EP</td>
+      <th>15138</th>
+      <td>4XETUJmrPQnmPd9elRiRE9</td>
+      <td>Rorschach</td>
+      <td>Ataraxis</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -532,10 +532,10 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>26903</th>
-      <td>4tbL8AtrM4hIYATf1kKp18</td>
-      <td>Where Are You Now</td>
-      <td>Where Are You Now</td>
+      <th>927</th>
+      <td>1bSO9nzT5h55OrJO7BbHL2</td>
+      <td>One Life - VIP Mix</td>
+      <td>One Life (VIP Mix)</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -543,10 +543,21 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>30429</th>
-      <td>04so2YoeEkrKTfmgoYRmvw</td>
-      <td>Lying We're Fine</td>
-      <td>Lying We're Fine</td>
+      <th>29304</th>
+      <td>1qZMPmpD1jDcOA7gZ6TCde</td>
+      <td>One (Your Name) - Radio Edit</td>
+      <td>One (Your Name)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4372</th>
+      <td>6TSlbHp7Vx4wZ0Rqciwn5v</td>
+      <td>Til I Don't</td>
+      <td>Til I Don't</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -554,76 +565,10 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>9869</th>
-      <td>0LLeuNBWPOg3XA73yab3PT</td>
-      <td>T.R.U. (Totally Rotten Underground)</td>
-      <td>My Liver Will Handle What My Heart Can't</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>7103</th>
-      <td>7II7n1Qy5He7hs2Q9XIbYD</td>
-      <td>Coffee Shoppe</td>
-      <td>Lost</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>13440</th>
-      <td>4g78lI7TkiIXIOZwzflR2U</td>
-      <td>(I'm Your) Hoochie Coochie Man</td>
-      <td>Blues Greats: Muddy Waters</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>29488</th>
-      <td>63ZtaTHM7Cu3JEca5xrWi3</td>
-      <td>Favorite Sound</td>
-      <td>Favorite Sound</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>12489</th>
-      <td>32qR2DcQRSJ6G2s8SC16oP</td>
-      <td>Honky Tonk Women</td>
-      <td>Rolled Gold +</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>6303</th>
-      <td>6qvfyXGXEPEYwwqBykWw3H</td>
-      <td>Professor X</td>
-      <td>Top Boy (A Selection of Music Inspired by the ...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>31948</th>
-      <td>2m9FaaFeLhjsWChEMDSczD</td>
-      <td>Hit the Floor "Power" (feat. Dollar Man)</td>
-      <td>Hit the floor "Power" feat. Dollarman</td>
+      <th>30868</th>
+      <td>1HfPcQ3c2HyGeID3u1lmCa</td>
+      <td>She Wolf (Falling to Pieces) (feat. Sia)</td>
+      <td>Nothing but the Beat 2.0</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
@@ -631,10 +576,10 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>10535</th>
-      <td>74leCkl7rVK7GcycRrc9wq</td>
-      <td>Insomniac</td>
-      <td>Insomniac</td>
+      <th>28764</th>
+      <td>2LFlu4XDVjO8czYT2pdf3q</td>
+      <td>Tarantella</td>
+      <td>Tarantella</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -642,10 +587,10 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>15046</th>
-      <td>28Cr95nnO5DUMQbZNYApBj</td>
-      <td>Follow the Blind</td>
-      <td>Follow the Blind</td>
+      <th>23577</th>
+      <td>2dcZFrC8XkdxhVxmb8p2kO</td>
+      <td>Brain Damage</td>
+      <td>Lizard Vision</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -653,43 +598,10 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>5483</th>
-      <td>7lgWYmAitmW9CTrpLJ8Np2</td>
-      <td>Get Weird</td>
-      <td>Get Weird</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1770</th>
-      <td>5eWgDlp3k6Tb5RD8690s6I</td>
-      <td>Sugar</td>
-      <td>V (Deluxe)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>11913</th>
-      <td>4OJFkrRQqol4FsPesF8eu4</td>
-      <td>Saturday in the Park - 2002 Remaster</td>
-      <td>Chicago V (Expanded &amp; Remastered)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>20140</th>
-      <td>0IOb3ODBaDXG3awyCTh4a5</td>
-      <td>MAMBO (feat. Childsplay &amp; Chuckie)</td>
-      <td>MAMBO (feat. Childsplay &amp; Chuckie)</td>
+      <th>25370</th>
+      <td>224EQMt8CpNPV98j9L4iMJ</td>
+      <td>No Lie (feat. WizKid)</td>
+      <td>Diaspora</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
@@ -697,10 +609,10 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>28483</th>
-      <td>12ZQdr6Ir1x6QByyPdJg9W</td>
-      <td>Bowser - Original Mix</td>
-      <td>Bowser</td>
+      <th>26452</th>
+      <td>7zL1R4SiaifOwieMmxsG7i</td>
+      <td>Who</td>
+      <td>Simply a Vessel, Vol 3: Surrender All</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -708,10 +620,10 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>1785</th>
-      <td>2BgEsaKNfHUdlh97KmvFyo</td>
-      <td>2002</td>
-      <td>Speak Your Mind (Deluxe)</td>
+      <th>3307</th>
+      <td>1foeacjwgWD6UMmirTXwL5</td>
+      <td>Por Ti</td>
+      <td>Dulce Beat</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -719,21 +631,109 @@ df_text.sample(20)
       <td>0</td>
     </tr>
     <tr>
-      <th>30787</th>
-      <td>4OCvd4ila7Zp0tEsFWs2hP</td>
-      <td>Don't Leave - Ekali Remix</td>
-      <td>Don't Leave (Remixes)</td>
+      <th>17577</th>
+      <td>4ZmAMOU0bcmrwwOvEK8aDT</td>
+      <td>Quién Diría</td>
+      <td>Canciones De Amor</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>30836</th>
+      <td>7pr168TcvrcajZoKC0qxi7</td>
+      <td>Tokyo</td>
+      <td>Tokyo</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>15711</th>
+      <td>4BSjvDSi3ZtrSavQqgu6jO</td>
+      <td>Got Your Six</td>
+      <td>Got Your Six (Deluxe)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9746</th>
+      <td>3Jw774vf185xkKIUZWySx5</td>
+      <td>Asi Son Mis Dias</td>
+      <td>Mucho Barato</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>24938</th>
+      <td>765k9tDIFOnoOfkO2cgitB</td>
+      <td>Take Me with U</td>
+      <td>Purple Rain</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>27284</th>
+      <td>29T5wjKGRJ2JAgWodMQGyf</td>
+      <td>Be My Oxygen</td>
+      <td>Be My Oxygen</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>15916</th>
+      <td>5zsgyaahJyDW91qyvzSG3Y</td>
+      <td>Guilty All the Same (feat. Rakim)</td>
+      <td>Guilty All the Same (feat. Rakim)</td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>32685</th>
-      <td>6JSE5UEjzwm0YgTIi4onh2</td>
-      <td>Inner Peace</td>
-      <td>Inner Peace</td>
+      <th>10093</th>
+      <td>7JCp9oPXLc8Akz9bZpYZ09</td>
+      <td>Vamos Pa' Encimota</td>
+      <td>Vamos Pa' Encimota</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>32309</th>
+      <td>3sz8Gn0fOmXmyXOaPSWBJ9</td>
+      <td>Sweet Escape</td>
+      <td>Forever</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>29260</th>
+      <td>07KQ3yYHQz6nfx05dLDMY6</td>
+      <td>We Remember</td>
+      <td>We Remember</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -808,21 +808,69 @@ df.sample(10)
   </thead>
   <tbody>
     <tr>
-      <th>572</th>
-      <td>0A5gdlrpAuQqZ2iFgnqBFW</td>
-      <td>Gaullin</td>
-      <td>76</td>
-      <td>4IU5ADOJ9DnVa9clXVhrEE</td>
-      <td>0.813</td>
-      <td>0.761</td>
-      <td>10</td>
-      <td>-5.687</td>
+      <th>17048</th>
+      <td>4hFV8xf1MD6Tmg2g0XltTY</td>
+      <td>Slim Thug</td>
+      <td>52</td>
+      <td>6ZmRtymFNo8pU2PQno73lv</td>
+      <td>0.781</td>
+      <td>0.710</td>
+      <td>1</td>
+      <td>-3.683</td>
       <td>0</td>
-      <td>0.0850</td>
+      <td>0.0903</td>
       <td>...</td>
-      <td>2018</td>
-      <td>9</td>
-      <td>7</td>
+      <td>2009</td>
+      <td>3</td>
+      <td>24</td>
+      <td>2000</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>27752</th>
+      <td>7qDV8EUMjj5sJdholWKUqk</td>
+      <td>Martin Garrix</td>
+      <td>42</td>
+      <td>2XXJOpnawvArFxXTu2A1VM</td>
+      <td>0.610</td>
+      <td>0.907</td>
+      <td>2</td>
+      <td>-5.224</td>
+      <td>1</td>
+      <td>0.1540</td>
+      <td>...</td>
+      <td>2017</td>
+      <td>8</td>
+      <td>18</td>
+      <td>2010</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>15815</th>
+      <td>4N1r70StM4WeymDNajIJQ6</td>
+      <td>bad nelson</td>
+      <td>22</td>
+      <td>4t4YCMTeNolYI0RziTnUnO</td>
+      <td>0.634</td>
+      <td>0.906</td>
+      <td>5</td>
+      <td>-5.106</td>
+      <td>0</td>
+      <td>0.0492</td>
+      <td>...</td>
+      <td>2019</td>
+      <td>10</td>
+      <td>4</td>
       <td>2010</td>
       <td>1</td>
       <td>0</td>
@@ -832,21 +880,69 @@ df.sample(10)
       <td>0</td>
     </tr>
     <tr>
-      <th>7439</th>
-      <td>22mhfCPBE5YzXWYekGJUdS</td>
-      <td>UGK</td>
-      <td>33</td>
-      <td>4jTPQq9PSlKMOm1yLx2ATN</td>
-      <td>0.733</td>
-      <td>0.531</td>
-      <td>11</td>
-      <td>-11.217</td>
+      <th>19325</th>
+      <td>5KVbaJP4IOZmZZlj5v4jp2</td>
+      <td>Marsha Ambrosius</td>
+      <td>48</td>
+      <td>3l9KeT7TXfQKg8RhzoC6DI</td>
+      <td>0.433</td>
+      <td>0.668</td>
+      <td>9</td>
+      <td>-6.544</td>
+      <td>1</td>
+      <td>0.2110</td>
+      <td>...</td>
+      <td>2011</td>
+      <td>2</td>
+      <td>25</td>
+      <td>2010</td>
+      <td>1</td>
       <td>0</td>
-      <td>0.3260</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6024</th>
+      <td>1epsUiCmy5UvIIeN5QpKwP</td>
+      <td>2nd Life</td>
+      <td>49</td>
+      <td>6N0Kl9owvaSy8JRnPFDfBb</td>
+      <td>0.526</td>
+      <td>0.773</td>
+      <td>2</td>
+      <td>-7.790</td>
+      <td>0</td>
+      <td>0.0513</td>
+      <td>...</td>
+      <td>2019</td>
+      <td>10</td>
+      <td>11</td>
+      <td>2010</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>26874</th>
+      <td>7cG3wfohoNDSp2M8FWrgTg</td>
+      <td>Paradisio</td>
+      <td>59</td>
+      <td>3iJwt0Sq44ZBzR7kNCxf0y</td>
+      <td>0.649</td>
+      <td>0.955</td>
+      <td>8</td>
+      <td>-7.817</td>
+      <td>0</td>
+      <td>0.0388</td>
       <td>...</td>
       <td>1996</td>
-      <td>7</td>
-      <td>30</td>
+      <td>1</td>
+      <td>1</td>
       <td>1990</td>
       <td>0</td>
       <td>0</td>
@@ -856,21 +952,21 @@ df.sample(10)
       <td>0</td>
     </tr>
     <tr>
-      <th>10791</th>
-      <td>2y9mJxMvj0Esoy8m7HpiYd</td>
-      <td>Manuel Costa</td>
-      <td>36</td>
-      <td>0dTTFNaeyKgoXJ4bhQgd7Y</td>
-      <td>0.667</td>
-      <td>0.720</td>
-      <td>2</td>
-      <td>-7.457</td>
+      <th>20796</th>
+      <td>5jmyckW7sSzXcGrP1AI1Zs</td>
+      <td>Stoltenhoff</td>
+      <td>34</td>
+      <td>1WlA9JfBZnrp6K2LCEVvbD</td>
+      <td>0.694</td>
+      <td>0.991</td>
+      <td>7</td>
+      <td>-3.045</td>
       <td>1</td>
-      <td>0.0303</td>
+      <td>0.1290</td>
       <td>...</td>
-      <td>2018</td>
-      <td>6</td>
-      <td>15</td>
+      <td>2019</td>
+      <td>8</td>
+      <td>5</td>
       <td>2010</td>
       <td>1</td>
       <td>0</td>
@@ -880,141 +976,21 @@ df.sample(10)
       <td>0</td>
     </tr>
     <tr>
-      <th>17748</th>
-      <td>4sT2hi5bgnG2ApK7Oq06QW</td>
-      <td>MARINA</td>
-      <td>53</td>
-      <td>1u2ACTYzVNK3vSLG0Ah4H3</td>
-      <td>0.759</td>
-      <td>0.760</td>
-      <td>9</td>
-      <td>-7.199</td>
-      <td>0</td>
-      <td>0.0322</td>
-      <td>...</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>13</td>
-      <td>2010</td>
+      <th>1358</th>
+      <td>0NIkKL6wsLK5V2vX97zOTr</td>
+      <td>Five Finger Death Punch</td>
+      <td>51</td>
+      <td>3Ey9TgEz0LdFKFKKftpkN1</td>
+      <td>0.564</td>
+      <td>0.978</td>
       <td>1</td>
+      <td>-4.294</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>19787</th>
-      <td>5T3xR4qk2OuhwnAOruVtjb</td>
-      <td>Showtek</td>
-      <td>0</td>
-      <td>1tBdHcGwY74NeqtxC7ptIv</td>
-      <td>0.739</td>
-      <td>0.953</td>
-      <td>11</td>
-      <td>-2.624</td>
-      <td>1</td>
-      <td>0.1330</td>
+      <td>0.1320</td>
       <td>...</td>
       <td>2013</td>
-      <td>9</td>
-      <td>2</td>
-      <td>2010</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>14271</th>
-      <td>3vxNh1kdvZ1nUHYUwKNStI</td>
-      <td>Brevis</td>
-      <td>39</td>
-      <td>07ZoShhxfpc6rubBbc4xr9</td>
-      <td>0.584</td>
-      <td>0.710</td>
-      <td>1</td>
-      <td>-5.077</td>
-      <td>1</td>
-      <td>0.1400</td>
-      <td>...</td>
-      <td>2019</td>
-      <td>9</td>
-      <td>11</td>
-      <td>2010</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>23332</th>
-      <td>6Qm7DBWQguBzK459j4fOBt</td>
-      <td>Ed Sheeran</td>
-      <td>50</td>
-      <td>7jfNbUImln4VF01QtMpe0q</td>
-      <td>0.649</td>
-      <td>0.264</td>
-      <td>9</td>
-      <td>-9.899</td>
-      <td>1</td>
-      <td>0.2800</td>
-      <td>...</td>
-      <td>2011</td>
-      <td>6</td>
-      <td>10</td>
-      <td>2010</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>17500</th>
-      <td>4ocmVnBOmRFzigZrIFpEfQ</td>
-      <td>Anju</td>
-      <td>35</td>
-      <td>6EWGkx9X4oEUUGGXHAmI4v</td>
-      <td>0.512</td>
-      <td>0.328</td>
       <td>7</td>
-      <td>-11.939</td>
-      <td>1</td>
-      <td>0.0338</td>
-      <td>...</td>
-      <td>2020</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2020</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>7435</th>
-      <td>22koI34FpNt6irOht3N8nJ</td>
-      <td>Zoë Kravitz</td>
-      <td>48</td>
-      <td>4YU2XJH8yVtQh5oPylvoDw</td>
-      <td>0.300</td>
-      <td>0.256</td>
-      <td>9</td>
-      <td>-10.452</td>
-      <td>1</td>
-      <td>0.0398</td>
-      <td>...</td>
-      <td>2017</td>
-      <td>3</td>
-      <td>31</td>
+      <td>30</td>
       <td>2010</td>
       <td>1</td>
       <td>0</td>
@@ -1024,21 +1000,45 @@ df.sample(10)
       <td>0</td>
     </tr>
     <tr>
-      <th>28260</th>
-      <td>7yOv1YISwpujFFQm6blOts</td>
-      <td>Seeb</td>
-      <td>60</td>
-      <td>3zNQ4jV4bWXdIBnJZemCHI</td>
-      <td>0.530</td>
-      <td>0.444</td>
-      <td>0</td>
-      <td>-9.779</td>
-      <td>0</td>
-      <td>0.0338</td>
+      <th>406</th>
+      <td>07AIGejOb0kM3S7mMHi7pm</td>
+      <td>BROHUG</td>
+      <td>44</td>
+      <td>1ZSGPXoqQonfIn9FWWdhq9</td>
+      <td>0.729</td>
+      <td>0.915</td>
+      <td>9</td>
+      <td>-4.925</td>
+      <td>1</td>
+      <td>0.0376</td>
       <td>...</td>
       <td>2019</td>
-      <td>3</td>
+      <td>4</td>
+      <td>12</td>
+      <td>2010</td>
       <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6926</th>
+      <td>1tpbAGsGpZee5jDHMcLrUJ</td>
+      <td>Dalex</td>
+      <td>82</td>
+      <td>3RWeME5ryDw9wxO99OoDgP</td>
+      <td>0.584</td>
+      <td>0.698</td>
+      <td>8</td>
+      <td>-3.961</td>
+      <td>1</td>
+      <td>0.1060</td>
+      <td>...</td>
+      <td>2019</td>
+      <td>9</td>
+      <td>6</td>
       <td>2010</td>
       <td>1</td>
       <td>0</td>
@@ -1387,7 +1387,7 @@ df_sorted.head()
 
 There is a little issue to solve here - unlike us the creator of the artist dataset didn't fill all null values.
 
-I will fix it using the median as a constant replacement for missing values.
+I will fix it using the median as a constant replacement for missing values:
 
 
 ```python
@@ -1404,10 +1404,16 @@ print(f"Number of NaN values in 'track_artist_followers': {nan_count}")
     Number of NaN values in 'track_artist_followers': 0
 
 
+We can drop `track_artist` now, we got all the data we can from it, and the original strings are not meaningful for our model:
+
 
 ```python
 df = df.drop(columns=['track_artist'])
 ```
+
+## Summary
+
+Lets have a look at our dataset, now that we have added all of those cool features!
 
 
 ```python
@@ -1840,6 +1846,8 @@ df.info()
     memory usage: 6.7+ MB
 
 
+Just making sure that there are no missing values in the dataset:
+
 
 ```python
 nan_counts = df.isna().sum()
@@ -1853,6 +1861,8 @@ nan_counts[nan_counts > 0]
 
 
 
+### Save it to the next chapter
+
 
 ```python
 df.to_csv('data/04_feature_engineering/feature_engineering.csv', index=False)
@@ -1862,3 +1872,5 @@ df.to_csv('data/04_feature_engineering/feature_engineering.csv', index=False)
 ```python
 df.to_pickle('pickle/04_feature_engineering/feature_engineering.pkl')   # Save the dataframe to a pickle file
 ```
+
+![tobecontinued.jpg](04_feature_engineering_files/tobecontinued.jpg)
