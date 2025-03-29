@@ -195,15 +195,15 @@ Lasso (Least Absolute Shrinkage and Selection Operator) and Ridge regression are
 
 - **Lasso Regression** applies an L1 penalty, which is defined as the sum of the absolute values of the coefficients:
 
-    $$ \text{L1} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j| $$
+$$ \text{L1} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j| $$
 
-    This penalty encourages sparsity by driving some coefficients to zero, effectively performing feature selection.
+This penalty encourages sparsity by driving some coefficients to zero, effectively performing feature selection.
 
 - **Ridge Regression** applies an L2 penalty, defined as the sum of the squared values of the coefficients:
 
-    $$ \text{L2} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2 $$
+$$ \text{L2} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2 $$
 
-    Unlike Lasso, Ridge shrinks coefficients towards zero without eliminating them entirely, making it suitable for scenarios where all features are expected to contribute to the model.
+Unlike Lasso, Ridge shrinks coefficients towards zero without eliminating them entirely, making it suitable for scenarios where all features are expected to contribute to the model.
 
 By combining these techniques, we identified the most relevant features while maintaining model stability and interpretability.
 
