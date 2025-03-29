@@ -150,4 +150,34 @@ The results of the imputation process are illustrated below:
 
 ## Feature Engineering
 
+In this step, we applied advanced feature enrichment techniques to enhance the dataset. These new features aim to provide the model with additional, meaningful information, potentially improving its predictive performance.
+
+The newly engineered features can be categorized into three groups:
+
+### Parsing the `track_album_release_date` column into meaningful features
+
+1. A standard feature engineering approach involves splitting a datetime field into `Year`, `Month`, and `Day` components.
+2. Since we are working with music, categorizing tracks by **decades** can provide valuable insights. To achieve this, we created a new `decade` column.
+
+Below is a visualization of an ANOVA test examining variance differences in popularity across decades:
+
+![Decade ANOVA](assets/project_overview/decade_anova.png)
+
+As shown, the means vary significantly between decades, supporting the inclusion of the `decade` column.
+
+3. The advent of the internet and the rise of streaming platforms have transformed how music is consumed, potentially influencing popularity trends. To capture this, we added a binary column indicating whether a track was released during the "internet era" - which we determined to start at 2008, Spotify launch year.
+
+### Analyzing the `track_name` Textual Column
+
+During the data preparation phase, we extracted free-text columns into a separate DataFrame, `df_text`. Now, we leverage this data for feature engineering.
+
+Using **WordCloud**, we analyzed the most frequently mentioned words in the `track_name` column. Based on this analysis, we created binary (dummy) columns to indicate whether a track's name contains any of the top five most common words.
+
+The five most frequent words were: `feat`, `Remix`, `Love`, `Radio Edit`, and `Remastered`. While not particularly surprising, these terms reflect common naming conventions in the music industry.
+
+### Incorporating artist popularity
+
+The original dataset lacked a unique identifier for artists, providing only their names as strings. This posed a challenge, as encoding artist names would not yield meaningful insights due to the high cardinality (over 10,000 unique values). Additionally, raw text processing of artist names would not benefit the model.
+
+To address this, we enriched the dataset by replacing the `track_artist` column with a new feature: the number of followers for each artist. This information was sourced from an external dataset, significantly enhancing the dataset's utility for predictive modeling.
 
