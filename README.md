@@ -48,75 +48,106 @@ This document provides an overview of the project, summarizing each step and hig
 
 ## Data Preparation
 
-### Dataset properties
+### Dataset Properties
 
-The original dataset shape is 32833 rows X 23 columns.
+The original dataset consists of **32,833 rows** and **23 columns**. 
 
-We started the data preparation process by having a first impression of our dataset features. The features can be divided into two groups:
+To begin the data preparation process, we conducted an initial assessment of the dataset's features. These features can be categorized into two groups:
 
-1. The track general attributes:
+1. **Track General Attributes**:
 
-variable                 |class     |
-|:---|:---|
-|track_id                 |character |
-|track_name               |character |
-|track_artist             |character |
-|track_popularity         |double    |
-|track_album_id           |character |
-|track_album_name         |character |
-|track_album_release_date |character |
-|playlist_name            |character |
-|playlist_id              |character |
-|playlist_genre           |character |
-|playlist_subgenre        |character |
+| Variable                 | Data Type  |
+|:-------------------------|:-----------|
+| `track_id`               | Character  |
+| `track_name`             | Character  |
+| `track_artist`           | Character  |
+| `track_popularity`       | Double     |
+| `track_album_id`         | Character  |
+| `track_album_name`       | Character  |
+| `track_album_release_date` | Character |
+| `playlist_name`          | Character  |
+| `playlist_id`            | Character  |
+| `playlist_genre`         | Character  |
+| `playlist_subgenre`      | Character  |
 
-2. The track musical features:
+2. **Track Musical Features**:
 
-variable                 |class     |
-|:---|:---|
-|danceability             |double    |
-|energy                   |double    |
-|key                      |double    |
-|loudness                 |double    |
-|mode                     |double    |
-|speechiness              |double    |
-|acousticness             |double    |
-|instrumentalness         |double    |
-|liveness                 |double    |
-|valence                  |double    |
-|tempo                    |double    |
-|duration_ms              |double    |
+| Variable                 | Data Type  |
+|:-------------------------|:-----------|
+| `danceability`           | Double     |
+| `energy`                 | Double     |
+| `key`                    | Double     |
+| `loudness`               | Double     |
+| `mode`                   | Double     |
+| `speechiness`            | Double     |
+| `acousticness`           | Double     |
+| `instrumentalness`       | Double     |
+| `liveness`               | Double     |
+| `valence`                | Double     |
+| `tempo`                  | Double     |
+| `duration_ms`            | Double     |
 
+Additionally, we identified **five rows** containing **missing values**.
 
-We also found that there are **five** rows in total with **missing values**.
+### Handling Rich-Text Columns
 
-### `df_text`
+We extracted the rich-text columns `['track_name', 'track_album_name', 'playlist_name']` into a separate DataFrame, `df_text`. These columns will be utilized during the Feature Engineering phase. For now, they were excluded to simplify the creation of a flat dataset.
 
-We moved the rich-text columns `['track_name', 'track_album_name', 'playlist_name']` to a separate dataframe called `df_text`. We will use this data in the Feature Engineering step, but for now it stands in the way of creating a flat file
+### Duplicate Tracks and Playlist Features
 
-### Duplicate tracks and handling playlist features
+Our analysis revealed **3,166 duplicate tracks** in the dataset. These duplicates were identified based on the `track_id` column. Upon further inspection, we observed that all `track_*` and `album_*` attributes were identical for the same `track_id`, including the musical features. The differences were confined to the `playlist_*` attributes, as the same track appeared in multiple playlists.
 
-We found *3166* tracks that appears two times or more in the dataset.
+Since our objective is to predict **track popularity**, playlist-specific details were deemed unnecessary. To address this, we implemented the following changes:
 
-A short look at the duplicated tracks rows showed us that even though we filtered for duplicated `track_id` values, all `track_*` and `album_*` values are duplicated as well for the same `track_id` (and the track musical properties).
+1. **Playlist Count**: Added a new column, `playlist_count`, to indicate the number of playlists in which a track appears.
+2. **Genre Encoding**: Replaced the `playlist_genre` and `playlist_subgenre` columns with one-hot encoded features for each main genre. Subgenres were mapped to their corresponding main genres, guaranteeing no data is being thrown due to the genre encoding.
 
-The differences are in the `playlist` features - the same track may appear in different playlists - creating duplicate entries for the track. But since we are predicting the **track** popularity, we have no need to know about the details about the playlist features.
+Below is a bar plot showing the genre distribution, including the subgenre mapping impact on the process:
 
-So we did a few changes: we created a new column `playlist_count` for each track, and dropped the genre columns by replacing them with one-hot encoding for each genre. We enhanced this process by taking into the account the sub-genres as well, classifying each subgenre to a corresponding main genre gave us extra data, as can be seen below:
+![Genre Encoding](assets/project_overview/genre_encoding.png)
 
-![alt text](assets/project_overview/genre_encoding.png)
+## Exploratory Data Analysis (EDA)
 
-## Explanatory Data Analysis
+The EDA phase began with the creation of a **Data Protocol**, a comprehensive document summarizing the dataset's structure and attributes. This protocol serves as a reference guide for project documentation and knowledge preservation. It is available [here](data/02_exploratory_data_analysis) (accessible within the GitHub repository).
 
-The EDA started with creating the **Data Protocol**. The Data Protocol is used for project documentation and knowledge-preservation. It can be used like a pocket guide to the dataset description. It can be found [here](data/02_exploratory_data_analysis).
+We then generated automated data-relation reports using **AutoViz** to uncover trends and correlations.
 
-Then we moved on to creating data-relations reports automatically using AutoViz.
+### Descriptive Statistics
 
-Regardless of the the visual insights, applying descriptive statistics tools such as Skewness, ANOVA, correlations etc. to learn more about the data and its internal relations.
+In addition to visual insights, we applied statistical methods such as skewness analysis, ANOVA, and correlation matrices to gain a deeper understanding of the data. Below is a highlight from our EDA: an ANOVA test examining significant differences in track popularity variances between two main genres, Pop and EDM:
 
-Below is one of the EDA highlights, a visualization for an ANOVA test checking for a significant differences in track popularity variances between two main genres, Pop and EDM:
-
-![alt text](assets/project_overview/genre_anova.png)
+![ANOVA Test](assets/project_overview/genre_anova.png)
 
 ## Data Cleansing
+
+The data cleansing process involved two primary steps:
+
+1. **Outlier Detection**: Identifying and handling outliers using statistical methods.
+2. **Missing Data Imputation**: Filling missing values using advanced techniques.
+
+### Outlier Detection
+
+We employed the **Interquartile Range (IQR)** method to detect outliers. The IQR is calculated as:
+
+$IQR = Q3 - Q1$
+
+
+Values outside the lower and upper bounds derived from the IQR were flagged as outliers and set to `Null`. Below is a visualization of the outlier detection process:
+
+![Outlier Detection](assets/project_overview/outlier_boxplots.png)
+
+### Missing Data Imputation
+
+To address missing values, including those introduced during outlier detection, we utilized **MICE (Multiple Imputation by Chained Equations)**. This technique leverages regression models to predict missing values, making it particularly effective for continuous data. Features with strong correlations were used as predictors for imputation.
+
+The results of the imputation process are illustrated below:
+
+- **Gray**: Original data distribution.
+- **Blue**: Data points within the IQR.
+- **Yellow**: Imputed data points.
+
+![Data Imputation](assets/project_overview/data_imputation_example.png)
+
+## Feature Engineering
+
 
