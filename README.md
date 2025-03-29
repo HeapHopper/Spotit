@@ -181,3 +181,62 @@ The original dataset lacked a unique identifier for artists, providing only thei
 
 To address this, we enriched the dataset by replacing the `track_artist` column with a new feature: the number of followers for each artist. This information was sourced from an external dataset, significantly enhancing the dataset's utility for predictive modeling.
 
+## Feature Selection
+
+After applying various *Feature Engineering* techniques, we generated several new columns. However, having a large number of features does not necessarily improve model performance. In fact, irrelevant or redundant features can lead to overfitting, reducing the model's generalization capability. To address this, we need to ensure that only meaningful features are included in the final dataset.
+
+To achieve this, we leveraged *Regularization* methods, which are specifically designed to identify and prioritize the most relevant features. Using techniques such as **Lasso** and **Ridge**, along with other regression models, we systematically selected a subset of features to optimize model performance.
+
+### Regularization Methods
+
+Lasso (Least Absolute Shrinkage and Selection Operator) and Ridge regression are two widely used regularization techniques that help prevent overfitting by penalizing large coefficients in regression models. 
+
+- **Lasso Regression** applies an L1 penalty, which is defined as the sum of the absolute values of the coefficients:
+
+    $$ L1 = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j| $$
+
+    This penalty encourages sparsity by driving some coefficients to zero, effectively performing feature selection.
+
+- **Ridge Regression** applies an L2 penalty, defined as the sum of the squared values of the coefficients:
+
+    $$ L2 = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2 $$
+
+    Unlike Lasso, Ridge shrinks coefficients towards zero without eliminating them entirely, making it suitable for scenarios where all features are expected to contribute to the model.
+
+By combining these techniques, we identified the most relevant features while maintaining model stability and interpretability.
+
+### Multivariable Analysis
+
+To further refine feature selection, we evaluated multiple regression models, including **Lasso**, **Ridge**, **LinearSVR**, **GradientBoostingRegressor**, and **RandomForestRegressor**. Each model was trained on the dataset, and feature importance (or coefficient values, in the case of regularization methods) was analyzed. Features that consistently ranked highly across all models were retained.
+
+Our goal was to retain between 15 and 30 features to balance model complexity and performance. After completing the feature selection process, we finalized a set of 23 features, as shown below:
+
+| Variable                | Data Type  |
+|-------------------------|------------|
+| `danceability`          | float64    |
+| `energy`                | float64    |
+| `key`                   | int64      |
+| `loudness`              | float64    |
+| `acousticness`          | float64    |
+| `instrumentalness`      | float64    |
+| `liveness`              | float64    |
+| `tempo`                 | float64    |
+| `duration_ms`           | int64      |
+| `playlist_count`        | int64      |
+| `edm`                   | bool       |
+| `pop`                   | bool       |
+| `r&b`                   | bool       |
+| `rap`                   | bool       |
+| `rock`                  | bool       |
+| `year`                  | int32      |
+| `month`                 | int32      |
+| `day`                   | int32      |
+| `decade`                | int32      |
+| `feat`                  | bool       |
+| `Remix`                 | bool       |
+| `track_artist_followers`| float64    |
+| `track_popularity`      | int64      |
+
+
+## Model Selection and Fine Tuning
+
