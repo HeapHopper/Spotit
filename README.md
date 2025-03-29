@@ -17,8 +17,6 @@ However, we did not rely solely on raw data for model training. This document su
 * **Feature Selection**: To prevent overfitting, we carefully selected the most relevant features for model training.
 * **Model Evaluation**: Various regression models were tested, and their performance was compared using multiple metrics. Hyperparameter tuning was conducted to optimize the chosen model.
 
-[Insert image created by Orange Data Mining]
-
 ### Potential Users of This Model
 
 This system offers value to multiple stakeholders in the music industry, including:
