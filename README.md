@@ -29,9 +29,11 @@ This system offers value to multiple stakeholders in the music industry, includi
 
 #### Model Deployment
 
-The machine learning model will be deployed as a web-based application using frameworks such as [Streamlit](https://streamlit.io/) or [Flask](https://flask.palletsprojects.com/en/stable/). Users will be able to input song attributes and receive a predicted popularity score.
+The machine learning model can be deployed as a web-based application using frameworks such as [Streamlit](https://streamlit.io/) or [Flask](https://flask.palletsprojects.com/en/stable/). Users will be able to input song attributes and receive a predicted popularity score.
 
 Additionally, the model can be integrated into existing analytics platforms for music producers, record labels, and streaming services. Deployment options include cloud-based hosting solutions (e.g., AWS, Google Cloud, or Azure) to ensure scalability and global accessibility.
+
+> It is important to note that, as of now, the model **has not been deployed** to any of the platforms mentioned above.
 
 ### Project Overview
 
@@ -240,3 +242,82 @@ Our goal was to retain between 15 and 30 features to balance model complexity an
 
 ## Model Selection and Fine Tuning
 
+### Model Selection
+
+After training multiple regression models on our dataset and evaluating their performance, we selected the model that demonstrated the best results. This selection was based on a thorough comparison of error metrics, ensuring the chosen model aligns with the project's objectives and delivers optimal predictive accuracy.
+
+To compare the models' performance, we choose four known error metrics:
+
+1. **Mean Squared Error (MSE)**  
+    $$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
+
+2. **Root Mean Squared Error (RMSE)**  
+    $$\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}$$
+
+3. **Root Mean Squared Logarithmic Error (RMSLE)**  
+    $$\text{RMSLE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \left( \log(1 + y_i) - \log(1 + \hat{y}_i) \right)^2}$$
+
+4. **Mean Absolute Error (MAE)**  
+    $$\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$
+
+We partitioned the dataset into training, testing, and validation subsets to ensure robust model evaluation. The following regression models were trained and evaluated:
+
+- **Linear Regression**
+- **Decision Tree Regressor**
+- **Random Forest Regressor**
+- **AdaBoost Regressor**
+- **Support Vector Regressor (SVR)**
+- **XGBoost Regressor**
+
+The performance metrics for each model are summarized in the table below:
+
+| Model                     | MSE        | RMSE       | MAE        | RMSLE    |
+|---------------------------|------------|------------|------------|----------|
+| RandomForestRegressor     | 391.706829 | 19.791585  | 15.693210  | 1.234586 |
+| XGBoost                   | 402.031867 | 20.050732  | 15.905198  | 1.234504 |
+| GradientBoostingRegressor | 400.263362 | 20.006583  | 16.193036  | 1.268597 |
+| LinearRegression          | 463.238315 | 21.522972  | 17.866299  | 1.312508 |
+| AdaBoostRegressor         | 455.858422 | 21.350841  | 18.140786  | 1.295698 |
+| SVR                       | 570.461359 | 23.884333  | 18.778443  | 1.401430 |
+| DecisionTreeRegressor     | 759.568374 | 27.560268  | 20.613208  | 1.602671 |
+
+Based on the evaluation metrics, the **Random Forest Regressor** emerged as the best-performing model, particularly excelling in terms of **Mean Absolute Error (MAE)**. Consequently, it was selected as the final model for this project.
+
+### Model Optimization (Fine-Tuning)
+
+To enhance the performance of the selected model, we employed `RandomizedSearchCV` to identify the optimal hyperparameters for the **Random Forest Regressor**. This process involved testing various combinations of hyperparameters to determine whether the tuned model could outperform the default configuration.
+
+The best hyperparameter configuration identified was as follows:
+
+```python
+RandomForestRegressor(
+    bootstrap=False, 
+    max_depth=20, 
+    max_features='sqrt',
+    min_samples_leaf=4, 
+    min_samples_split=5,
+    n_estimators=200
+)
+```
+
+#### Performance Comparison
+
+We compared the performance of the tuned model (best estimator) against the default configuration of the **Random Forest Regressor**. The comparison was based on the **Mean Absolute Error (MAE)** metric:
+
+| Model            | MAE   |
+|-------------------|-------|
+| Default Model     | 15.607 |
+| Best Estimator    | 15.633 |
+
+The results indicate a slight performance degradation of **-0.17%** with the tuned model. Given this outcome, we retained the default **Random Forest Regressor** as the final model for this project.
+
+
+## Summary
+
+This concludes our journey through the essentials of machine learning.
+
+We began by creating a flat dataset, conducted exploratory data analysis to uncover trends and insights, addressed outliers and missing values, and enriched the dataset through feature engineering. By employing robust feature selection techniques, we mitigated overfitting and ensured the inclusion of only the most relevant features. Finally, we identified and fine-tuned the optimal model to achieve the best predictive performance for our data.
+
+This comprehensive process highlights the importance of a structured and methodical approach to machine learning, ensuring both accuracy and reliability in the results.
+
+Tzvi E. Nir
